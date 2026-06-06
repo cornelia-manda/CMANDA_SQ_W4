@@ -33,26 +33,26 @@ function draw() {
   if (currentScreen === 15) drawScene15();
 }
 
-function mousePressed() {
-  // LOCK IN the active screen at the exact millisecond the mouse goes down.
-  // This completely stops the click from "bleeding" into the next screen.
-  let screenAtMomentOfClick = currentScreen;
+// CHANGED TO mouseReleased() TO ELIMINATE FAST-FORWARDING BUTTON CLICKS
+function mouseReleased() {
+  // Lock in the screen state at the exact millisecond the mouse button is let go
+  let screenAtMomentOfRelease = currentScreen;
 
-  if (screenAtMomentOfClick === 1) pressScene1();
-  else if (screenAtMomentOfClick === 2) pressScene2();
-  else if (screenAtMomentOfClick === 3) pressScene3();
-  else if (screenAtMomentOfClick === 4) pressScene4();
-  else if (screenAtMomentOfClick === 5) pressScene5();
-  else if (screenAtMomentOfClick === 6) pressScene6();
-  else if (screenAtMomentOfClick === 7) pressScene7();
-  else if (screenAtMomentOfClick === 8) pressScene8();
-  else if (screenAtMomentOfClick === 9) pressScene9();
-  else if (screenAtMomentOfClick === 10) pressScene10();
-  else if (screenAtMomentOfClick === 11) pressScene11();
-  else if (screenAtMomentOfClick === 12) pressScene12();
-  else if (screenAtMomentOfClick === 13) pressScene13();
-  else if (screenAtMomentOfClick === 14) pressScene14();
-  else if (screenAtMomentOfClick === 15) pressScene15();
+  if (screenAtMomentOfRelease === 1) pressScene1();
+  else if (screenAtMomentOfRelease === 2) pressScene2();
+  else if (screenAtMomentOfRelease === 3) pressScene3();
+  else if (screenAtMomentOfRelease === 4) pressScene4();
+  else if (screenAtMomentOfRelease === 5) pressScene5();
+  else if (screenAtMomentOfRelease === 6) pressScene6();
+  else if (screenAtMomentOfRelease === 7) pressScene7();
+  else if (screenAtMomentOfRelease === 8) pressScene8();
+  else if (screenAtMomentOfRelease === 9) pressScene9();
+  else if (screenAtMomentOfRelease === 10) pressScene10();
+  else if (screenAtMomentOfRelease === 11) pressScene11();
+  else if (screenAtMomentOfRelease === 12) pressScene12();
+  else if (screenAtMomentOfRelease === 13) pressScene13();
+  else if (screenAtMomentOfRelease === 14) pressScene14();
+  else if (screenAtMomentOfRelease === 15) pressScene15();
 }
 
 // Global helper function checking mouse coordinates over a button region
