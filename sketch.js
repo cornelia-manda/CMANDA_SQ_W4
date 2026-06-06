@@ -1,6 +1,10 @@
 // This global variable tracks which scene is currently active (1 through 15)
 let currentScreen = 1;
 
+// Safety mechanism to prevent fast-forward click bleeding
+let lastScreenChangedTime = 0;
+const CLICK_COOLDOWN_MS = 200; // 200 milliseconds safety window
+
 // Shared dimensions for user interaction buttons
 const BTN_W = 280;
 const BTN_H = 50;
@@ -33,26 +37,34 @@ function draw() {
   if (currentScreen === 15) drawScene15();
 }
 
-// CHANGED TO mouseReleased() TO ELIMINATE FAST-FORWARDING BUTTON CLICKS
-function mouseReleased() {
-  // Lock in the screen state at the exact millisecond the mouse button is let go
-  let screenAtMomentOfRelease = currentScreen;
+function mousePressed() {
+  // Check if enough time has passed since the last screen change
+  if (millis() - lastScreenChangedTime < CLICK_COOLDOWN_MS) {
+    return; // Ignore the click if it's happening too fast!
+  }
 
-  if (screenAtMomentOfRelease === 1) pressScene1();
-  else if (screenAtMomentOfRelease === 2) pressScene2();
-  else if (screenAtMomentOfRelease === 3) pressScene3();
-  else if (screenAtMomentOfRelease === 4) pressScene4();
-  else if (screenAtMomentOfRelease === 5) pressScene5();
-  else if (screenAtMomentOfRelease === 6) pressScene6();
-  else if (screenAtMomentOfRelease === 7) pressScene7();
-  else if (screenAtMomentOfRelease === 8) pressScene8();
-  else if (screenAtMomentOfRelease === 9) pressScene9();
-  else if (screenAtMomentOfRelease === 10) pressScene10();
-  else if (screenAtMomentOfRelease === 11) pressScene11();
-  else if (screenAtMomentOfRelease === 12) pressScene12();
-  else if (screenAtMomentOfRelease === 13) pressScene13();
-  else if (screenAtMomentOfRelease === 14) pressScene14();
-  else if (screenAtMomentOfRelease === 15) pressScene15();
+  let screenAtMomentOfClick = currentScreen;
+
+  if (screenAtMomentOfClick === 1) pressScene1();
+  else if (screenAtMomentOfClick === 2) pressScene2();
+  else if (screenAtMomentOfClick === 3) pressScene3();
+  else if (screenAtMomentOfClick === 4) pressScene4();
+  else if (screenAtMomentOfClick === 5) pressScene5();
+  else if (screenAtMomentOfClick === 6) pressScene6();
+  else if (screenAtMomentOfClick === 7) pressScene7();
+  else if (screenAtMomentOfClick === 8) pressScene8();
+  else if (screenAtMomentOfClick === 9) pressScene9();
+  else if (screenAtMomentOfClick === 10) pressScene10();
+  else if (screenAtMomentOfClick === 11) pressScene11();
+  else if (screenAtMomentOfClick === 12) pressScene12();
+  else if (screenAtMomentOfClick === 13) pressScene13();
+  else if (screenAtMomentOfClick === 14) pressScene14();
+  else if (screenAtMomentOfClick === 15) pressScene15();
+
+  // If a button click successfully changed the screen, reset our safety timer
+  if (currentScreen !== screenAtMomentOfClick) {
+    lastScreenChangedTime = millis();
+  }
 }
 
 // Global helper function checking mouse coordinates over a button region
