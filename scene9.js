@@ -1,11 +1,10 @@
 function drawScene9() {
   renderSceneText(
-    "Screen 9: Ending 4 - The Plump Protagonist",
-    "The niacinamide worked its magic. Your skin barrier is thriving, your tone is perfectly even, and you radiate health. You spend the whole night receiving compliments on your 'lit-from-within' glow.",
+    "Screen 9: Ending 2 - Clean-Girl Icon",
+    "Brilliant! The tinted SPF blended perfectly into your healthy skin. You step onto the red carpet looking completely effortless, dewy, and radiant. A perfect win!",
   );
-  renderButton(width / 2, 380, "See Your Final Gala Rank");
+  renderButton(width / 2, 380, "Play Again");
 }
-
 function pressScene9() {
-  if (isMouseOver(width / 2, 380, BTN_W, BTN_H)) currentScreen = 14;
+  if (isMouseOver(width / 2, 380, BTN_W, BTN_H)) currentScreen = 1;
 }

@@ -1,17 +1,13 @@
 function drawScene4() {
   renderSceneText(
-    "Screen 4: Late Afternoon Prep (Minimalist Track)",
-    "It's 5:00 PM. The limo is arriving soon. How do you want to style your hydrated base for the cameras?",
+    "Screen 4: Minimalist + Hydration Prep",
+    "It's 5:00 PM. Your skin is incredibly plump and juicy, but your blemish is still barely visible. Time for your final makeup prep layer:",
   );
-  renderButton(width / 2 - 160, 340, "Go for Full Glam Makeup");
-  renderButton(width / 2 + 160, 340, "Keep it Sheer & Dewy");
-  renderButton(width / 2 - 160, 410, "Apply Heavy Matte Powder");
-  renderButton(width / 2 + 160, 410, "Mist Luminous Setting Spray");
+  renderButton(width / 2 - 160, 380, "Apply High-Coverage Foundation");
+  renderButton(width / 2 + 160, 380, "Keep it Sheer with a Tinted SPF");
 }
 
 function pressScene4() {
-  if (isMouseOver(width / 2 - 160, 340, BTN_W, BTN_H)) currentScreen = 6; // Ending 1
-  if (isMouseOver(width / 2 + 160, 340, BTN_W, BTN_H)) currentScreen = 7; // Ending 2
-  if (isMouseOver(width / 2 - 160, 410, BTN_W, BTN_H)) currentScreen = 8; // Ending 3
-  if (isMouseOver(width / 2 + 160, 410, BTN_W, BTN_H)) currentScreen = 9; // Ending 4
+  if (isMouseOver(width / 2 - 160, 380, BTN_W, BTN_H)) currentScreen = 8;
+  if (isMouseOver(width / 2 + 160, 380, BTN_W, BTN_H)) currentScreen = 9;
 }

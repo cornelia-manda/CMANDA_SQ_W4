@@ -1,11 +1,13 @@
 function drawScene7() {
   renderSceneText(
-    "Screen 7: Ending 2 - The Glazed Donut Disaster",
-    "You over-slugged. Under the heavy gala lights, the thick balm melts down your face, taking your makeup with it. You don't look radiant; you look like you just finished a marathon inside a sauna.",
+    "Screen 7: Maximalist + Ceramide Prep",
+    "It's 5:00 PM. The calming ceramides successfully managed the intense tingling sensation. What is your absolute final adjustment?",
   );
-  renderButton(width / 2, 380, "Go to the Recovery Room");
+  renderButton(width / 2 - 160, 380, "Apply a Chilled Gel Sheet Mask");
+  renderButton(width / 2 + 160, 380, "Slap a Slugging Balm Over Everything");
 }
 
 function pressScene7() {
-  if (isMouseOver(width / 2, 380, BTN_W, BTN_H)) currentScreen = 15;
+  if (isMouseOver(width / 2 - 160, 380, BTN_W, BTN_H)) currentScreen = 14;
+  if (isMouseOver(width / 2 + 160, 380, BTN_W, BTN_H)) currentScreen = 15;
 }

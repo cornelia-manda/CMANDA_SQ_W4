@@ -1,11 +1,10 @@
 function drawScene15() {
   renderSceneText(
-    "Screen 15: The Recovery Room",
-    "You spend the night applying ice packs in the bathroom. Your choices taught you a valuable lesson: skincare is a marathon, not a sprint. Tomorrow, we focus completely on skin healing.",
+    "Screen 15: Ending 8 - The Melting Donut",
+    "You over-slugged! Under the heavy gala spotlights, the thick ointment melts entirely down your collar, taking your clothes and confidence with it. Too much moisture!",
   );
-  renderButton(width / 2, 380, "Play Again");
+  renderButton(width / 2, 380, "Restart Game");
 }
-
 function pressScene15() {
-  if (isMouseOver(width / 2, 380, BTN_W, BTN_H)) currentScreen = 1; // Loops back to start
+  if (isMouseOver(width / 2, 380, BTN_W, BTN_H)) currentScreen = 1;
 }

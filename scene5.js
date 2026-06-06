@@ -1,17 +1,13 @@
 function drawScene5() {
   renderSceneText(
-    "Screen 5: Emergency Protocols (Maximalist Track)",
-    "It's 5:00 PM. Your face is reacting strongly to your midday choices. You must make one final formatting adjustment before hitting the carpet.",
+    "Screen 5: Minimalist + Brightening Prep",
+    "It's 5:00 PM. Your complexion is smooth, even-toned, and calm. Let's finish your baseline style before walking out the door:",
   );
-  renderButton(width / 2 - 160, 340, "Layer on Thick Concealer");
-  renderButton(width / 2 + 160, 340, "Ice Your Face Aggressively");
-  renderButton(width / 2 - 160, 410, "Apply Barrier Ointment");
-  renderButton(width / 2 + 160, 410, "Do Nothing and Go Raw");
+  renderButton(width / 2 - 160, 380, "Set Face with Heavy Matte Powder");
+  renderButton(width / 2 + 160, 380, "Mist with a Luminous Mist Spray");
 }
 
 function pressScene5() {
-  if (isMouseOver(width / 2 - 160, 340, BTN_W, BTN_H)) currentScreen = 10; // Ending 5
-  if (isMouseOver(width / 2 + 160, 340, BTN_W, BTN_H)) currentScreen = 11; // Ending 6
-  if (isMouseOver(width / 2 - 160, 410, BTN_W, BTN_H)) currentScreen = 12; // Ending 7
-  if (isMouseOver(width / 2 + 160, 410, BTN_W, BTN_H)) currentScreen = 13; // Ending 8
+  if (isMouseOver(width / 2 - 160, 380, BTN_W, BTN_H)) currentScreen = 10;
+  if (isMouseOver(width / 2 + 160, 380, BTN_W, BTN_H)) currentScreen = 11;
 }

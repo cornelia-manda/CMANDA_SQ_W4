@@ -1,11 +1,10 @@
 function drawScene13() {
   renderSceneText(
-    "Screen 13: Ending 8 - The Cool & Collected",
-    "The cold hydrogel mask saved the day. It instantly took down the redness and inflammation from your aggressive morning routine. Your skin looks calm, refreshed, and ready to party.",
+    "Screen 13: Ending 6 - The Cake-Makeup Mask",
+    "The thick concealer temporarily masked the redness, but the underlying acid irritation made your makeup peel off in patches by midnight. Time for a long skin-healing sabbatical.",
   );
-  renderButton(width / 2, 380, "Go to the Recovery Room");
+  renderButton(width / 2, 380, "Restart Game");
 }
-
 function pressScene13() {
-  if (isMouseOver(width / 2, 380, BTN_W, BTN_H)) currentScreen = 15;
+  if (isMouseOver(width / 2, 380, BTN_W, BTN_H)) currentScreen = 1;
 }

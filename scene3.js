@@ -1,18 +1,13 @@
 function drawScene3() {
   renderSceneText(
-    "Screen 3: The Maximalist Danger",
-    "You used a heavy peel and retinol. Your skin is tingling dangerously and looking flushed under the midday sun. Quick, choose your intervention:",
+    "Screen 3: The Maximalist Path",
+    "You attack the blemishes with heavy chemical actives. By noon, your skin is tingling uncomfortably. How do you handle this?",
   );
-  renderButton(width / 2 - 160, 340, "B1: Heavy Vitamin C");
-  renderButton(width / 2 + 160, 340, "B2: Apricot Scrub");
-  renderButton(width / 2 - 160, 410, "D1: Hyaluronic Acid");
-  renderButton(width / 2 + 160, 410, "D2: Cold Hydrogel Mask");
+  renderButton(width / 2 - 160, 380, "B1: Add Vitamin C for Extra Glow");
+  renderButton(width / 2 + 160, 380, "B2: Apply a Rich Ceramide Cream");
 }
 
 function pressScene3() {
-  // All choices advance forward cleanly to the Maximalist Prep screen
-  if (isMouseOver(width / 2 - 160, 340, BTN_W, BTN_H)) currentScreen = 5;
-  if (isMouseOver(width / 2 + 160, 340, BTN_W, BTN_H)) currentScreen = 5;
-  if (isMouseOver(width / 2 - 160, 410, BTN_W, BTN_H)) currentScreen = 5;
-  if (isMouseOver(width / 2 + 160, 410, BTN_W, BTN_H)) currentScreen = 5;
+  if (isMouseOver(width / 2 - 160, 380, BTN_W, BTN_H)) currentScreen = 6;
+  if (isMouseOver(width / 2 + 160, 380, BTN_W, BTN_H)) currentScreen = 7;
 }
