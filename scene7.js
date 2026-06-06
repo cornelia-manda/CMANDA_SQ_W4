@@ -1,11 +1,3 @@
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(220);
-}
-
 function drawScene7() {
   renderSceneText(
     "Screen 7: Ending 2 - The Glazed Donut Disaster",

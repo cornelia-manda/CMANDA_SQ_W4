@@ -1,11 +1,3 @@
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(220);
-}
-
 function drawScene6() {
   renderSceneText(
     "Screen 6: Ending 1 - The Balanced Goddess",

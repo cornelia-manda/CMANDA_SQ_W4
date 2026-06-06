@@ -1,7 +1,7 @@
-// This global variable is accessible by ALL scene files!
+// This global variable tracks which scene is currently active
 let currentScreen = 1;
 
-// Constants for button sizing shared across files
+// Shared dimensions for user interaction buttons
 const BTN_W = 280;
 const BTN_H = 50;
 
@@ -13,9 +13,9 @@ function setup() {
 }
 
 function draw() {
-  background(255); // White background
+  background(255); // Keeps the background crisp white
 
-  // Checks currentScreen and runs the draw function from that specific file
+  // Traffic controller routing the drawing tasks to the correct file
   if (currentScreen === 1) drawScene1();
   if (currentScreen === 2) drawScene2();
   if (currentScreen === 3) drawScene3();
@@ -34,7 +34,7 @@ function draw() {
 }
 
 function mousePressed() {
-  // Routes mouse clicks to the mouse handler of the active scene
+  // Traffic controller routing the clicks to the correct file
   if (currentScreen === 1) pressScene1();
   if (currentScreen === 2) pressScene2();
   if (currentScreen === 3) pressScene3();
@@ -52,7 +52,7 @@ function mousePressed() {
   if (currentScreen === 15) pressScene15();
 }
 
-// Global helper function to check if mouse is over a button
+// Global engine helper checking mouse position
 function isMouseOver(x, y, w, h) {
   return (
     mouseX > x - w / 2 &&
@@ -62,7 +62,7 @@ function isMouseOver(x, y, w, h) {
   );
 }
 
-// Global helper function to format a standard text screen
+// Global engine helper formatting descriptive text layouts
 function renderSceneText(title, description) {
   fill(50);
   textSize(24);
@@ -73,11 +73,11 @@ function renderSceneText(title, description) {
   text(description, width / 2, 170, 650, 180);
 }
 
-// Global helper function to quickly draw UI buttons
+// Global engine helper formatting standard UI buttons
 function renderButton(x, y, label) {
   stroke(0);
   strokeWeight(2);
-  fill(isMouseOver(x, y, BTN_W, BTN_H) ? 230 : 255);
+  fill(isMouseOver(x, y, BTN_W, BTN_H) ? 235 : 255);
   rect(x, y, BTN_W, BTN_H, 6);
 
   noStroke();

@@ -1,11 +1,3 @@
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(220);
-}
-
 function drawScene10() {
   renderSceneText(
     "Screen 10: Ending 5 - The Acid Burn Catastrophe",

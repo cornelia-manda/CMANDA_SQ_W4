@@ -1,11 +1,3 @@
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(220);
-}
-
 function drawScene9() {
   renderSceneText(
     "Screen 9: Ending 4 - The Plump Protagonist",

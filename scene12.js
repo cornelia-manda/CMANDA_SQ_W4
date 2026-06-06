@@ -1,11 +1,3 @@
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(220);
-}
-
 function drawScene12() {
   renderSceneText(
     "Screen 12: Ending 7 - The Masterful Recovery",

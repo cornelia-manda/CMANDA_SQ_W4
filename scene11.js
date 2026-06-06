@@ -1,11 +1,3 @@
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(220);
-}
-
 function drawScene11() {
   renderSceneText(
     "Screen 11: Ending 6 - The Physical Trauma",
