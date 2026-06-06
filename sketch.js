@@ -1,4 +1,4 @@
-// This global variable tracks which scene is currently active
+// This global variable tracks which scene is currently active (1 through 15)
 let currentScreen = 1;
 
 // Shared dimensions for user interaction buttons
@@ -13,9 +13,9 @@ function setup() {
 }
 
 function draw() {
-  background(255); // Keeps the background crisp white
+  background(255); // Keeps the background a crisp, solid white
 
-  // Traffic controller routing the drawing tasks to the correct file
+  // Traffic controller drawing the correct screen based on your whiteboard layout
   if (currentScreen === 1) drawScene1();
   if (currentScreen === 2) drawScene2();
   if (currentScreen === 3) drawScene3();
@@ -34,25 +34,25 @@ function draw() {
 }
 
 function mousePressed() {
-  // Traffic controller routing the clicks to the correct file
+  // Traffic controller routing clicks ONLY to the active scene file
   if (currentScreen === 1) pressScene1();
-  if (currentScreen === 2) pressScene2();
-  if (currentScreen === 3) pressScene3();
-  if (currentScreen === 4) pressScene4();
-  if (currentScreen === 5) pressScene5();
-  if (currentScreen === 6) pressScene6();
-  if (currentScreen === 7) pressScene7();
-  if (currentScreen === 8) pressScene8();
-  if (currentScreen === 9) pressScene9();
-  if (currentScreen === 10) pressScene10();
-  if (currentScreen === 11) pressScene11();
-  if (currentScreen === 12) pressScene12();
-  if (currentScreen === 13) pressScene13();
-  if (currentScreen === 14) pressScene14();
-  if (currentScreen === 15) pressScene15();
+  else if (currentScreen === 2) pressScene2();
+  else if (currentScreen === 3) pressScene3();
+  else if (currentScreen === 4) pressScene4();
+  else if (currentScreen === 5) pressScene5();
+  else if (currentScreen === 6) pressScene6();
+  else if (currentScreen === 7) pressScene7();
+  else if (currentScreen === 8) pressScene8();
+  else if (currentScreen === 9) pressScene9();
+  else if (currentScreen === 10) pressScene10();
+  else if (currentScreen === 11) pressScene11();
+  else if (currentScreen === 12) pressScene12();
+  else if (currentScreen === 13) pressScene13();
+  else if (currentScreen === 14) pressScene14();
+  else if (currentScreen === 15) pressScene15();
 }
 
-// Global engine helper checking mouse position
+// Global helper function checking mouse coordinates over a button region
 function isMouseOver(x, y, w, h) {
   return (
     mouseX > x - w / 2 &&
@@ -62,7 +62,7 @@ function isMouseOver(x, y, w, h) {
   );
 }
 
-// Global engine helper formatting descriptive text layouts
+// Global helper function formatting the game text content layouts
 function renderSceneText(title, description) {
   fill(50);
   textSize(24);
@@ -73,11 +73,11 @@ function renderSceneText(title, description) {
   text(description, width / 2, 170, 650, 180);
 }
 
-// Global engine helper formatting standard UI buttons
+// Global helper function rendering standard choice interactive buttons
 function renderButton(x, y, label) {
   stroke(0);
   strokeWeight(2);
-  fill(isMouseOver(x, y, BTN_W, BTN_H) ? 235 : 255);
+  fill(isMouseOver(x, y, BTN_W, BTN_H) ? 235 : 255); // Simple grey tint hover highlight
   rect(x, y, BTN_W, BTN_H, 6);
 
   noStroke();
