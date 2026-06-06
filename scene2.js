@@ -1,7 +1,7 @@
 function drawScene2() {
   renderSceneText(
     "Screen 2: The Minimalist Dilemma",
-    "Your skin feels calm and comfortable, but as midday approaches, you notice a distinct lack of 'wow' factor. You are hydrated, but the blemish is still lingering. Select your final touch:",
+    "Your skin feels calm, but as midday approaches, it lacks excitement. The blemish is lingering and you need a boost. Select your midday treatment:",
   );
   renderButton(width / 2 - 160, 340, "A1: Tinted Zinc SPF");
   renderButton(width / 2 + 160, 340, "A2: Slugging Balm");
@@ -10,8 +10,9 @@ function drawScene2() {
 }
 
 function pressScene2() {
-  if (isMouseOver(width / 2 - 160, 340, BTN_W, BTN_H)) currentScreen = 6;
-  if (isMouseOver(width / 2 + 160, 340, BTN_W, BTN_H)) currentScreen = 7;
-  if (isMouseOver(width / 2 - 160, 410, BTN_W, BTN_H)) currentScreen = 8;
-  if (isMouseOver(width / 2 + 160, 410, BTN_W, BTN_H)) currentScreen = 9;
+  // All choices here advance cleanly to Screen 4 for the final prep phase
+  if (isMouseOver(width / 2 - 160, 340, BTN_W, BTN_H)) currentScreen = 4;
+  if (isMouseOver(width / 2 + 160, 340, BTN_W, BTN_H)) currentScreen = 4;
+  if (isMouseOver(width / 2 - 160, 410, BTN_W, BTN_H)) currentScreen = 4;
+  if (isMouseOver(width / 2 + 160, 410, BTN_W, BTN_H)) currentScreen = 4;
 }
