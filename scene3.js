@@ -1,7 +1,7 @@
 function drawScene3() {
   renderSceneText(
     "Screen 3: The Maximalist Danger",
-    "You used a glycolic acid peel followed by a heavy dose of retinol. Your skin is definitely awake, but now it’s tingling dangerously, looking a bit flushed. Quick, choice your savior!",
+    "You used a glycolic acid peel followed by a heavy dose of retinol. Your skin is definitely awake, but now it’s tingling dangerously and looking a bit flushed. Quick, choose your savior!",
   );
   renderButton(width / 2 - 160, 340, "B1: Heavy Vitamin C");
   renderButton(width / 2 + 160, 340, "B2: Apricot Scrub");
