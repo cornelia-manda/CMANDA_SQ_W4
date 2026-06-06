@@ -34,22 +34,25 @@ function draw() {
 }
 
 function mousePressed() {
-  // Traffic controller routing clicks ONLY to the active scene file
-  if (currentScreen === 1) pressScene1();
-  else if (currentScreen === 2) pressScene2();
-  else if (currentScreen === 3) pressScene3();
-  else if (currentScreen === 4) pressScene4();
-  else if (currentScreen === 5) pressScene5();
-  else if (currentScreen === 6) pressScene6();
-  else if (currentScreen === 7) pressScene7();
-  else if (currentScreen === 8) pressScene8();
-  else if (currentScreen === 9) pressScene9();
-  else if (currentScreen === 10) pressScene10();
-  else if (currentScreen === 11) pressScene11();
-  else if (currentScreen === 12) pressScene12();
-  else if (currentScreen === 13) pressScene13();
-  else if (currentScreen === 14) pressScene14();
-  else if (currentScreen === 15) pressScene15();
+  // LOCK IN the active screen at the exact millisecond the mouse goes down.
+  // This completely stops the click from "bleeding" into the next screen.
+  let screenAtMomentOfClick = currentScreen;
+
+  if (screenAtMomentOfClick === 1) pressScene1();
+  else if (screenAtMomentOfClick === 2) pressScene2();
+  else if (screenAtMomentOfClick === 3) pressScene3();
+  else if (screenAtMomentOfClick === 4) pressScene4();
+  else if (screenAtMomentOfClick === 5) pressScene5();
+  else if (screenAtMomentOfClick === 6) pressScene6();
+  else if (screenAtMomentOfClick === 7) pressScene7();
+  else if (screenAtMomentOfClick === 8) pressScene8();
+  else if (screenAtMomentOfClick === 9) pressScene9();
+  else if (screenAtMomentOfClick === 10) pressScene10();
+  else if (screenAtMomentOfClick === 11) pressScene11();
+  else if (screenAtMomentOfClick === 12) pressScene12();
+  else if (screenAtMomentOfClick === 13) pressScene13();
+  else if (screenAtMomentOfClick === 14) pressScene14();
+  else if (screenAtMomentOfClick === 15) pressScene15();
 }
 
 // Global helper function checking mouse coordinates over a button region
