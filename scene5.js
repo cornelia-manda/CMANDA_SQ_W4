@@ -1,12 +1,12 @@
 function drawScene5() {
   renderSceneText(
     "Screen 5: Emergency Protocols (Maximalist Track)",
-    "It's 5:00 PM. Your face is reacting to your midday choices. You need to make one absolute final adjustment before stepping out the door.",
+    "It's 5:00 PM. Your face is reacting strongly to your midday choices. You must make one final formatting adjustment before hitting the carpet.",
   );
   renderButton(width / 2 - 160, 340, "Layer on Thick Concealer");
   renderButton(width / 2 + 160, 340, "Ice Your Face Aggressively");
-  renderButton(width / 2 - 160, 410, "Apply a Barrier Recovery Ointment");
-  renderButton(width / 2 + 160, 410, "Do Nothing and Hope for the Best");
+  renderButton(width / 2 - 160, 410, "Apply Barrier Ointment");
+  renderButton(width / 2 + 160, 410, "Do Nothing and Go Raw");
 }
 
 function pressScene5() {

@@ -10,7 +10,7 @@ function drawScene3() {
 }
 
 function pressScene3() {
-  // All choices here advance cleanly to Screen 5 for the emergency recovery phase
+  // All choices advance forward cleanly to the Maximalist Prep screen
   if (isMouseOver(width / 2 - 160, 340, BTN_W, BTN_H)) currentScreen = 5;
   if (isMouseOver(width / 2 + 160, 340, BTN_W, BTN_H)) currentScreen = 5;
   if (isMouseOver(width / 2 - 160, 410, BTN_W, BTN_H)) currentScreen = 5;

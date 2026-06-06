@@ -8,6 +8,6 @@ function drawScene1() {
 }
 
 function pressScene1() {
-  if (isMouseOver(width / 2 - 160, 380, BTN_W, BTN_H)) currentScreen = 2;
-  if (isMouseOver(width / 2 + 160, 380, BTN_W, BTN_H)) currentScreen = 3;
+  if (isMouseOver(width / 2 - 160, 380, BTN_W, BTN_H)) currentScreen = 2; // Moves to Choice 2 (Min)
+  if (isMouseOver(width / 2 + 160, 380, BTN_W, BTN_H)) currentScreen = 3; // Moves to Choice 2 (Max)
 }
